@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+    }
+    nav {
+      display: flex;
+      background-color: #333;
+    }
+    nav a {
+      flex: 1;
+      padding: 14px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    nav a.active {
+      background-color: crimson;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="active">Home</a>
+    <a>Action</a>
+    <a>Comedy</a>
+    <a>Horror</a>
+    <a>Drama</a>
+  </nav>
+
+  <div class="content">
+    <div class="section active">
+      <h1>Welcome to Movie World</h1>
+      <p>Explore your favorite genres and discover amazing films!</p>
+    </div>
+    <div class="section">
+      <h1>Action Movies</h1>
+      <p>High speed chases, explosions, and non-stop excitement.</p>
+      <img src = "fight.jpeg">
+    </div>
+    <div class="section">
+      <h1>Comedy Movies</h1>
+      <p>Laugh your heart out with these hilarious comedies.</p>
+      <img src = "home.jpeg">
+    </div>
+    <div class="section">
+      <h1>Horror Movies</h1>
+      <p>Spine-chilling thrillers that will keep you up at night.</p>
+      <img src = "evil.jpeg">
+    </div>
+    <div class="section">
+      <h1>Drama Movies</h1>
+      <p>Emotional and thought-provoking stories from around the world.</p>
+      <img src = "pur.jpeg">
+    </div>
+  </div>
+
+  <script>
+    const menuItems = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll(".section");
+
+    menuItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        // Remove active class from all menu items
+        menuItems.forEach(link => link.classList.remove("active"));
+        // Add active class to clicked item
+        item.classList.add("active");
+
+        // Hide all sections
+        sections.forEach(sec => sec.classList.remove("active"));
+        // Show the section matching the clicked menu
+        sections[index].classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
+
