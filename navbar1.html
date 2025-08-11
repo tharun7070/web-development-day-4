@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Navigation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: white;
+    }
+    nav {
+      display: flex;
+      background-color: #333;
+    }
+    nav a {
+      flex: 1;
+      padding: 14px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    nav a.active {
+      background-color: crimson;
+    }
+    .content {
+      padding: 20px;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: block;
+    }
+    .section-box {
+      background-color: #222;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .movie-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+    .movie-card:hover {
+      transform: translateY(-5px);
+    }
+    .movie-card img {
+      width: 150px;
+      height: 225px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .movie-info {
+      flex: 1;
+    }
+    .movie-info h3 {
+      margin-top: 0;
+      color: crimson;
+    }
+    .rating {
+      color: gold;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .review-quote {
+      font-style: italic;
+      color: #ccc;
+      border-left: 3px solid crimson;
+      padding-left: 10px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="active">Home</a>
+    <a>Action</a>
+    <a>Comedy</a>
+    <a>Horror</a>
+    <a>Drama</a>
+  </nav>
+
+  <div class="content">
+    <div class="section active">
+      <h1>Welcome to Movie World</h1>
+      <p>Explore your favorite genres and discover amazing films!</p>
+    </div>
+
+    <div class="section">
+      <h1>Action Movies</h1>
+      <div class="section-box">
+        <h2>High-Octane Thrills</h2>
+        
+        <div class="movie-card">
+          <img src="fight.jpeg" alt="Action Movie 1 Poster">
+          <div class="movie-info">
+            <h3>Fight Club</h3>
+            <p>A master thief and his crew plan the most audacious bank robbery in history, but a brilliant detective is hot on their trail.</p>
+            <div class="rating">★★★★☆ (4/5)</div>
+            <div class="review-quote">"A non-stop thrill ride from start to finish. The stunts are breathtaking!" - The Film Critic</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img src="quant.jpg" alt="Action Movie 2 Poster">
+          <div class="movie-info">
+            <h3>Quantum Strike</h3>
+            <p>A disgraced special forces agent must race against time to stop a rogue military faction from launching a devastating global attack.</p>
+            <div class="rating">★★★★★ (5/5)</div>
+            <div class="review-quote">"The pinnacle of the genre. An absolute must-see for action fans." - Cinema Weekly</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <h1>Comedy Movies</h1>
+      <div class="section-box">
+        <h2>Laugh-Out-Loud Fun</h2>
+
+        <div class="movie-card">
+          <img src="home.jpeg" alt="Comedy Movie 1 Poster">
+          <div class="movie-info">
+            <h3>Home Alone</h3>
+            <p>A 8 year old boy was left alone at home, he places several traps to escape from the robbers who invade his house</p>
+            <div class="rating">★★★☆☆ (3/5)</div>
+            <div class="review-quote">"A lighthearted and charming comedy that will leave you smiling." - The Daily Review</div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <img src="vac.jpg" alt="Comedy Movie 2 Poster">
+          <div class="movie-info">
+            <h3>Vacation Disaster</h3>
+            <p>A family's dream vacation turns into a chaotic nightmare when they get lost in a foreign country without their luggage.</p>
+            <div class="rating">★★★★☆ (4/5)</div>
+            <div class="review-quote">"Pure comedic gold! I haven't laughed this hard in years." - Movie Magazine</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <h1>Horror Movies</h1>
+      <div class="section-box">
+        <h2>Spine-Chilling Thrills</h2>
+
+        <div class="movie-card">
+          <img src="whisper.jpg" alt="Horror Movie 1 Poster">
+          <div class="movie-info">
+            <h3>The Whispering House</h3>
+            <p>A family moves into a remote, old house, only to discover a sinister presence that preys on their deepest fears.</p>
+            <div class="rating">★★★★☆ (4/5)</div>
+            <div class="review-quote">"A masterclass in psychological terror. It's truly unnerving." - Fright Night</div>
+          </div>
+        </div>
+        
+        <div class="movie-card">
+          <img src="silent.jpg" alt="Horror Movie 2 Poster">
+          <div class="movie-info">
+            <h3>Silent Echoes</h3>
+            <p>A group of friends on a camping trip accidentally awaken an ancient evil that hunts by sound.</p>
+            <div class="rating">★★★★★ (5/5)</div>
+            <div class="review-quote">"A relentless and terrifying film that will keep you on the edge of your seat." - Horror Hub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h1>Drama Movies</h1>
+      <div class="section-box">
+        <h2>Thought-Provoking Stories</h2>
+
+        <div class="movie-card">
+          <img src="https://via.placeholder.com/150x225/FF9933/FFFFFF?text=Drama+1" alt="Drama Movie 1 Poster">
+          <div class="movie-info">
+            <h3>The Last Letter</h3>
+            <p>A young woman discovers a series of letters left by her late grandmother, uncovering a long-lost family secret and a hidden love story.</p>
+            <div class="rating">★★★★☆ (4/5)</div>
+            <div class="review-quote">"A beautiful and emotionally powerful film that explores themes of love and legacy." - Indie Film Review</div>
+          </div>
+        </div>
+        
+        <div class="movie-card">
+          <img src="https://via.placeholder.com/150x225/FF9933/FFFFFF?text=Drama+2" alt="Drama Movie 2 Poster">
+          <div class="movie-info">
+            <h3>A Tale of Two Cities</h3>
+            <p>A story of friendship and betrayal set against the backdrop of a rapidly changing city, where old traditions clash with modern ambitions.</p>
+            <div class="rating">★★★★★ (5/5)</div>
+            <div class="review-quote">"A masterful piece of storytelling with phenomenal performances." - The Cinephile</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuItems = document.querySelectorAll("nav a");
+    const sections = document.querySelectorAll(".section");
+
+    menuItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        menuItems.forEach(link => link.classList.remove("active"));
+        item.classList.add("active");
+        sections.forEach(sec => sec.classList.remove("active"));
+        sections[index].classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
