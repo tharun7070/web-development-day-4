@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Tasks</title>
+</head>
+<body>
+
+    <h2>2. Simple Counter App</h2>
+    <h1>Counter: <span id="counter">0</span></h1>
+    <button onclick="decrement()">−</button>
+    <button onclick="increment()">+</button>
+    <script>
+        let count = 0;
+        const counterDisplay = document.getElementById('counter');
+
+        function increment() {
+            count++;
+            counterDisplay.textContent = count;
+        }
+
+        function decrement() {
+            count--;
+            counterDisplay.textContent = count;
+        }
+    </script>
+
+</body>
+</html>

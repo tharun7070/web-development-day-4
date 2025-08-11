@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Color Changer</title>
+    <style>
+        body { transition: background-color 0.5s ease; }
+    </style>
+</head>
+<body>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <script>
+        function changeBackgroundColor() {
+            const colors = ['#f0f8ff', '#faebd7', '#ffefd5', '#f5f5dc', '#fffafa'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
